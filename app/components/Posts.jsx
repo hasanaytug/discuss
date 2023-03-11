@@ -21,7 +21,7 @@ async function Posts() {
       {posts.map((post) => {
         const date = String(post.createdAt);
         return (
-          <div className="w-1/2 mt-5 bg-gray-400 p-4 rounded" key={post.id}>
+          <div className="w-full mt-5 bg-gray-400 p-4 rounded" key={post.id}>
             <div className="flex items-center bg-gray-200 pt-2 rounded-t">
               <Image
                 className="ml-4 rounded-full "

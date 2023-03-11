@@ -27,10 +27,10 @@ function AddPost({ email, session }) {
         value={text.length < 200 ? text : text.slice(0, 199)}
         placeholder={session ? "Share your thoughts" : "Please Sign In to post"}
         onChange={(e) => setText(e.target.value)}
-        className="w-1/2 mt-10  h-32 mx-h-32 bg-gray-200 focus:outline-none p-4 resize-none overflow-hidden rounded"
+        className="w-full mt-10  h-32 mx-h-32 bg-gray-200 focus:outline-none p-4 resize-none overflow-hidden rounded"
       ></textarea>
       {session ? (
-        <div className="flex w-1/2 justify-between items-center">
+        <div className="flex w-full justify-between items-center">
           <p
             className={`${
               text.length > 200 ? `text-red-600` : `text-white`
