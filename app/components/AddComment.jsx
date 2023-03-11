@@ -5,13 +5,7 @@ import Comments from "./Comments";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-interface User {
-  email: string;
-  id: string;
-  comments: object;
-}
-
-function AddComment({ email, id, comments }: User) {
+function AddComment({ email, id, comments }) {
   const Router = useRouter();
   const [text, setText] = useState("");
   const [newComments, setNewComments] = useState(comments);

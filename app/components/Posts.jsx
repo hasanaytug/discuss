@@ -5,15 +5,6 @@ import PostInfo from "./PostInfo";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../../pages/api/auth/[...nextauth]";
 
-interface Post {
-  id: string;
-  title: string;
-  createdAt: string;
-  updatedAt: string;
-  userId: string;
-  User: Object;
-}
-
 async function Posts() {
   const session = await getServerSession(authOptions);
   const posts = await prisma.post.findMany({
@@ -27,7 +18,7 @@ async function Posts() {
 
   return (
     <div className="flex flex-col items-center">
-      {posts.map((post: Post) => {
+      {posts.map((post) => {
         const date = String(post.createdAt);
         return (
           <div className="w-1/2 mt-5 bg-gray-400 p-4 rounded" key={post.id}>
@@ -50,7 +41,7 @@ async function Posts() {
             <PostInfo
               id={post.id}
               user={post.User}
-              session={session!!}
+              session={session}
             ></PostInfo>
           </div>
         );

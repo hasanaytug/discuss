@@ -4,13 +4,7 @@ import CommentSection from "./CommentSection";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-interface Post {
-  id: string;
-  user: object;
-  session: object;
-}
-
-function PostInfo({ id, user, session }: Post) {
+function PostInfo({ id, user, session }) {
   const Router = useRouter();
   const [showComments, setShowComments] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

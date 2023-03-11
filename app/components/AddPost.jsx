@@ -4,12 +4,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-interface User {
-  email: string;
-  session: object;
-}
-
-function AddPost({ email, session }: User) {
+function AddPost({ email, session }) {
   const Router = useRouter();
   const [text, setText] = useState("");
   const [posting, setPosting] = useState(false);
