@@ -11,10 +11,13 @@ function AddPost({ email, session }) {
 
   const handleAdd = async () => {
     setPosting(true);
-    const res = await axios.post("http://localhost:3000/api/create-post", {
-      text,
-      email,
-    });
+    const res = await axios.post(
+      "https://discuss-taupe.vercel.app/api/create-post",
+      {
+        text,
+        email,
+      }
+    );
     Router.refresh();
     setPosting(false);
   };

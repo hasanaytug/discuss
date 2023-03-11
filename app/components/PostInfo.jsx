@@ -14,7 +14,7 @@ function PostInfo({ id, user, session }) {
   const handleComments = async () => {
     setIsLoading(true);
     const { data } = await axios.get(
-      "http://localhost:3000/api/fetch-comments"
+      "https://discuss-taupe.vercel.app/api/fetch-comments"
     );
     setComments(data);
     setShowComments(!showComments);
@@ -23,11 +23,14 @@ function PostInfo({ id, user, session }) {
 
   const handleDelete = async () => {
     setIsDeleting(true);
-    const res = await axios.delete("http://localhost:3000/api/delete-post", {
-      data: {
-        id,
-      },
-    });
+    const res = await axios.delete(
+      "https://discuss-taupe.vercel.app/api/delete-post",
+      {
+        data: {
+          id,
+        },
+      }
+    );
     setIsDeleting(false);
     Router.refresh();
   };

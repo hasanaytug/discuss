@@ -13,13 +13,16 @@ function AddComment({ email, id, comments }) {
 
   const handleAdd = async () => {
     setIsLoading(true);
-    const res = await axios.post("http://localhost:3000/api/create-comment", {
-      text,
-      email,
-      postId: id,
-    });
+    const res = await axios.post(
+      "https://discuss-taupe.vercel.app/api/create-comment",
+      {
+        text,
+        email,
+        postId: id,
+      }
+    );
     const { data } = await axios.get(
-      "http://localhost:3000/api/fetch-comments"
+      "https://discuss-taupe.vercel.app/api/fetch-comments"
     );
     setNewComments(data);
     setIsLoading(false);
