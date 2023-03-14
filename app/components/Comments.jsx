@@ -17,7 +17,7 @@ function Comments({ comments, id, newComments }) {
                     alt="user picture"
                     src={comment.User.image}
                   ></Image>
-                  <p className="ml-4 w-1/2 break-words text-white overflow-hidden">
+                  <p className="ml-4 w-1/2 text-white overflow-hidden">
                     {comment.title}
                   </p>
                 </div>

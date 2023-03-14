@@ -12,7 +12,7 @@ function Logged({ image }: User) {
   return (
     <li className="flex justify-center items-center">
       <button
-        className="bg-blue-700 text-white p-2 rounded"
+        className="bg-blue-700 hover:bg-blue-500 text-white p-2 rounded"
         onClick={() => signOut()}
       >
         Sign Out

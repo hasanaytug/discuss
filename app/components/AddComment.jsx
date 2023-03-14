@@ -40,7 +40,7 @@ function AddComment({ email, id, comments }) {
         <div className="flex w-full justify-end items-center">
           <button
             onClick={handleAdd}
-            className="bg-blue-300 p-1 rounded m-2 w-full text-sm"
+            className="bg-blue-300 p-1 rounded m-2 w-full text-sm hover:bg-blue-500"
           >
             {isLoading ? "Loading..." : "Comment"}
           </button>
