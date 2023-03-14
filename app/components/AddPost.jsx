@@ -31,7 +31,7 @@ function AddPost({ email, session }) {
         className={`${
           !session ? "divide-solid" : null
         } w-full mt-10  h-32 mx-h-32 bg-gray-200 focus:outline-none p-4 resize-none overflow-hidden rounded`}
-        disabled={`${session ? false : true}`}
+        disabled={session ? false : true}
       ></textarea>
       {session ? (
         <div className="flex w-full justify-between items-center">
@@ -42,7 +42,7 @@ function AddPost({ email, session }) {
           >{`${text.length}/200`}</p>
           <button
             onClick={handleAdd}
-            disabled={`{${posting ? "true" : "false"}}`}
+            disabled={posting ? "true" : "false"}
             className={`bg-blue-300 hover:bg-blue-500 p-2 rounded m-2 text-sm ${
               posting ? "disabled:opacity-75" : ""
             }`}
