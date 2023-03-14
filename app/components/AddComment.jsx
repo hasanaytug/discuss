@@ -41,7 +41,9 @@ function AddComment({ email, id, comments }) {
           <button
             onClick={handleAdd}
             disabled={isLoading ? true : false}
-            className="bg-blue-300 p-1 rounded m-2 text-sm hover:bg-blue-500"
+            className={`bg-blue-300 p-1 rounded m-2 text-sm ${
+              isLoading ? null : "hover:bg-blue-500"
+            }`}
           >
             {isLoading ? "Loading..." : "Comment"}
           </button>

@@ -55,7 +55,9 @@ function PostInfo({ id, user, session }) {
               onClick={handleDelete}
               className={`${
                 isDeleting ? "bg-red-600 disabled:opacity-75" : "bg-red-600"
-              }  text-white px-2 rounded ml-2 hover:bg-red-800`}
+              }  text-white px-2 rounded ml-2 ${
+                isDeleting ? null : "hover:bg-red-800"
+              }`}
             >
               {isDeleting ? "Deleting..." : "Delete"}
             </button>
