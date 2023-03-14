@@ -42,7 +42,7 @@ function AddPost({ email, session }) {
           >{`${text.length}/200`}</p>
           <button
             onClick={handleAdd}
-            disabled={posting ? "true" : "false"}
+            disabled={posting ? true : false}
             className={`bg-blue-300 hover:bg-blue-500 p-2 rounded m-2 text-sm ${
               posting ? "disabled:opacity-75" : ""
             }`}
