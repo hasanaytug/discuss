@@ -42,8 +42,8 @@ function PostInfo({ id, user, session }) {
             <button
               className={`${
                 isLoading
-                  ? "bg-blue-200 hover:bg-blue-400 disabled opacity-75"
-                  : "bg-blue-200"
+                  ? "bg-blue-200  disabled opacity-75"
+                  : "bg-blue-200 hover:bg-blue-400"
               }  px-2 rounded`}
               onClick={handleComments}
             >
