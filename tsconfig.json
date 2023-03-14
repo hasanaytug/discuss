@@ -30,6 +30,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/layout.jsx"
-  ],
+, "app/components/AddComment.jsx", "app/components/AddPost.jsx", "app/components/Posts.jsx", "app/components/PostInfo.jsx", "app/components/CommentSection.jsx", "app/components/Comments.jsx"  ],
   "exclude": ["node_modules"]
 }

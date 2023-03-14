@@ -30,17 +30,17 @@ function AddComment({ email, id, comments }) {
   };
   return (
     <div>
-      <div className="flex items-center mt-6 ">
-        <input
+      <div className="flex items-end justify-start mt-6 mb-4 ">
+        <textarea
           value={text.length < 200 ? text : text.slice(0, 199)}
           onChange={(e) => setText(e.target.value)}
           placeholder="Type your comment"
-          className="w-1/2 h-8 bg-gray-100 focus:outline-none p-4 resize-none overflow-hidden rounded"
+          className="w-full h-full bg-gray-100 focus:outline-none p-4 resize-none overflow-hidden rounded"
         />
-        <div className="flex w-full justify-end items-center">
+        <div className="flex w-full items-center">
           <button
             onClick={handleAdd}
-            className="bg-blue-300 p-1 rounded m-2 w-full text-sm hover:bg-blue-500"
+            className="bg-blue-300 p-1 rounded m-2 text-sm hover:bg-blue-500"
           >
             {isLoading ? "Loading..." : "Comment"}
           </button>
