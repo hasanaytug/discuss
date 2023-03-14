@@ -28,7 +28,10 @@ function AddPost({ email, session }) {
         value={text.length < 200 ? text : text.slice(0, 199)}
         placeholder={session ? "Share your thoughts" : "Please Sign In to post"}
         onChange={(e) => setText(e.target.value)}
-        className="w-full mt-10  h-32 mx-h-32 bg-gray-200 focus:outline-none p-4 resize-none overflow-hidden rounded"
+        className={`${
+          !session ? "divide-solid" : null
+        } w-full mt-10  h-32 mx-h-32 bg-gray-200 focus:outline-none p-4 resize-none overflow-hidden rounded`}
+        disabled={`${session ? false : true}`}
       ></textarea>
       {session ? (
         <div className="flex w-full justify-between items-center">
@@ -39,6 +42,7 @@ function AddPost({ email, session }) {
           >{`${text.length}/200`}</p>
           <button
             onClick={handleAdd}
+            disabled={`{${posting ? "true" : "false"}}`}
             className={`bg-blue-300 hover:bg-blue-500 p-2 rounded m-2 text-sm ${
               posting ? "disabled:opacity-75" : ""
             }`}
