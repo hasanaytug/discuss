@@ -26,6 +26,7 @@ function AddComment({ email, id, comments }) {
     );
     setNewComments(data);
     setIsLoading(false);
+    setText("");
   };
   return (
     <div>
@@ -34,7 +35,7 @@ function AddComment({ email, id, comments }) {
           value={text.length < 200 ? text : text.slice(0, 199)}
           onChange={(e) => setText(e.target.value)}
           placeholder="Type your comment"
-          className="w-full h-8 bg-gray-100 focus:outline-none p-4 resize-none overflow-hidden rounded"
+          className="w-1/2 h-8 bg-gray-100 focus:outline-none p-4 resize-none overflow-hidden rounded"
         />
         <div className="flex w-full justify-end items-center">
           <button

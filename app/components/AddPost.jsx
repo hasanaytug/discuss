@@ -20,6 +20,7 @@ function AddPost({ email, session }) {
     );
     Router.refresh();
     setPosting(false);
+    setText("");
   };
   return (
     <div className="flex flex-col items-center">
